@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Architecture - AI Traffic Flow Management</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    body {
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .diagram-container {
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .layer-card {
+      width: 100%;
+      background: #ffffff;
+      border: 1.5px solid #222222;
+      border-radius: 16px;
+      padding: 16px 20px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+    .layer-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 14px;
+      letter-spacing: -0.2px;
+    }
+    .pills-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .pill {
+      padding: 10px 18px;
+      border-radius: 9999px;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-align: center;
+      transition: transform 0.15s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 32px;
+      color: #1f2937;
+    }
+    .arrow svg {
+      width: 22px;
+      height: 22px;
+    }
+    /* Layer Color Themes matching the reference diagram */
+    .pill-blue {
+      background-color: #bae6fd;
+      color: #0369a1;
+      border: 1px solid #7dd3fc;
+    }
+    .pill-green {
+      background-color: #bbf7d0;
+      color: #15803d;
+      border: 1px solid #86efac;
+    }
+    .pill-orange {
+      background-color: #fed7aa;
+      color: #c2410c;
+      border: 1px solid #fdba74;
+    }
+    .pill-purple {
+      background-color: #ddd6fe;
+      color: #6d28d9;
+      border: 1px solid #c4b5fd;
+    }
+    .pill-red {
+      background-color: #fecaca;
+      color: #b91c1c;
+      border: 1px solid #fca5a5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="diagram-container">
+    
+    <!-- Layer 1: User Interface Layer -->
+    <div class="layer-card">
+      <div class="layer-title">User Interface Layer</div>
+      <div class="pills-group">
+        <div class="pill pill-blue">React 18 Dashboard</div>
+        <div class="pill pill-blue">Interactive SVG Traffic Canvas</div>
+        <div class="pill pill-blue">Step-by-Step Search Animator</div>
+      </div>
+    </div>
+
+    <div class="arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="4" x2="12" y2="20"></line>
+        <polyline points="6 14 12 20 18 14"></polyline>
+      </svg>
+    </div>
+
+    <!-- Layer 2: Application & Agent Layer -->
+    <div class="layer-card">
+      <div class="layer-title">Application & Agent Layer</div>
+      <div class="pills-group">
+        <div class="pill pill-green">Goal-Based PEAS Agent</div>
+        <div class="pill pill-green">Dynamic Incident Detector</div>
+        <div class="pill pill-green">Bypass Re-planning Controller</div>
+      </div>
+    </div>
+
+    <div class="arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="4" x2="12" y2="20"></line>
+        <polyline points="6 14 12 20 18 14"></polyline>
+      </svg>
+    </div>
+
+    <!-- Layer 3: Search & Processing Layer -->
+    <div class="layer-card">
+      <div class="layer-title">Search & Processing Layer</div>
+      <div class="pills-group">
+        <div class="pill pill-orange">A* Heuristic Search Engine</div>
+        <div class="pill pill-orange">Dijkstra Shortest Path</div>
+        <div class="pill pill-orange">BFS & DFS Graph Traversers</div>
+      </div>
+    </div>
+
+    <div class="arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="4" x2="12" y2="20"></line>
+        <polyline points="6 14 12 20 18 14"></polyline>
+      </svg>
+    </div>
+
+    <!-- Layer 4: Data & Graph Model Layer -->
+    <div class="layer-card">
+      <div class="layer-title">Data & Graph Model Layer</div>
+      <div class="pills-group">
+        <div class="pill pill-purple">15-Junction Euclidean Graph</div>
+        <div class="pill pill-purple">Dynamic Congestion Matrix (26 Roads)</div>
+        <div class="pill pill-purple">Combinatorial Route Store</div>
+      </div>
+    </div>
+
+    <div class="arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="4" x2="12" y2="20"></line>
+        <polyline points="6 14 12 20 18 14"></polyline>
+      </svg>
+    </div>
+
+    <!-- Layer 5: Infrastructure Layer -->
+    <div class="layer-card">
+      <div class="layer-title">Infrastructure Layer</div>
+      <div class="pills-group">
+        <div class="pill pill-red">Node.js & Vite Runtime</div>
+        <div class="pill pill-red">Local State & Telemetry Engine</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
